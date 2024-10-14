@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-markmcl25-p4-14d5b5uc795.ws-eu116.gitpod.io']
 
-
+# Add CSRF trusted origins for Gitpod
+CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io']
 
 # Application definition
 
