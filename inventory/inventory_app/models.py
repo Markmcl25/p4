@@ -20,3 +20,11 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+# To track orders and item transactions.
+class Order(models.Model):
+    item = models.ForeignKey(Item, on_delete=models.CASCADE)
+    quantity = models.IntegerField()
+    order_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Order {self.id} for {self.item.name}"
